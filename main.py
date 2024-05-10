@@ -80,11 +80,12 @@ def main():
                 data = get_averages_combined(home_team,away_team)
                 result = model.predict(data)
                 st.header("Winning Team")
-                if result[0] == home_team:
+                if result[0] == 0:
                     show_image(team_name= home_team,images_path=logo_path)
                 else:
                     show_image(team_name= away_team,images_path=logo_path)
                 st.balloons()
+    
             
         
 
