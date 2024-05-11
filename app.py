@@ -29,7 +29,7 @@ def store_logo_path(path):
 # Function to load the trained model
 @st.cache_resource
 def load_model():
-    with open('Artificats\model.pkl', 'rb') as file:  
+    with open('Artificats/model.pkl', 'rb') as file:  
         model = pickle.load(file)
     return model
 
