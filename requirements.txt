@@ -1,0 +1,6 @@
+nba_api
+opencv_python
+pandas
+plotly
+scikit_learn
+streamlit
