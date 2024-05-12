@@ -2,7 +2,6 @@ import pandas as pd
 from nba_api.stats.endpoints import leaguegamefinder
 from src.Functionality.processor import encode,split_matchup,rolling_average,combine,clean_df,team_list
 import warnings
-import os
 import streamlit as st
 warnings.filterwarnings("ignore")
 

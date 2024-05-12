@@ -2,7 +2,6 @@ import streamlit as st
 import os
 import pickle
 import cv2 as cv
-import plotly.graph_objects as go
 from src.Functionality.extractor import get_averages_combined, get_data
 
 # Set page configuration
@@ -10,12 +9,13 @@ st.set_page_config(
     page_title="NBA Win Predictor",
     layout='wide', 
     page_icon=":basketball:",
-    initial_sidebar_state="auto",
+    initial_sidebar_state="collapsed",
     menu_items={
         'About': "I love basketball and I'm an avid NBA fan. This is my passion project."
     }
 )
 
+st.session_state.update(st.session_state)
 # List of NBA teams
 teams = ['ATL', 'BOS', 'CLE', 'NOP', 'CHI', 'DAL', 'DEN', 'GSW', 'HOU', 'LAC', 'LAL', 'MIA', 'MIL',
          'MIN', 'BKN', 'NYK', 'ORL', 'IND', 'PHI', 'PHX', 'POR', 'SAC', 'SAS', 'OKC', 'TOR', 'UTA', 'MEM', 'WAS', 'DET', 'CHA']
