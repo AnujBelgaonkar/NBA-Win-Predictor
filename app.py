@@ -2,7 +2,8 @@ import streamlit as st
 import os
 import pickle
 import cv2 as cv
-from src.Functionality.extractor import get_averages_combined, get_data
+from src.Functionality.extractor import get_averages_combined   
+from src.Functionality.background import apply_background
 
 # Set page configuration
 st.set_page_config(
@@ -62,6 +63,7 @@ def select_persist(HorA):
 def main():
     # Load the trained model
     model = load_model()
+    apply_background()
     logo_path = store_logo_path("logos")
     
     # Set session states
@@ -121,6 +123,7 @@ def main():
             st.markdown("---")
             st.markdown("### Last 5 Games Comparison")
             st.page_link("pages/Last 5 Games Comparision.py", label = "Go")
+
 
 if __name__ == "__main__":
     main()
