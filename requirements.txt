@@ -1,6 +1,6 @@
-nba_api
-opencv-python-headless
-pandas
-plotly
-scikit_learn
-streamlit
+nba_api==1.4.1
+opencv-python-headless==4.9.0.80
+pandas==2.2.2
+plotly==5.22.0
+scikit_learn==1.4.0
+streamlit==1.32.2

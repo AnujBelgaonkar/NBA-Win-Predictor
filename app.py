@@ -84,7 +84,7 @@ def main():
             col1, col2, col3 = st.columns([1, 1, 1], gap="small")
             with col1:
                 st.header("Home Team")
-                home_team = st.selectbox("", options=teams, index=select_persist('Home'), placeholder="Select Home team", key="Home")
+                home_team = st.selectbox("first select box", options=teams, index=select_persist('Home'), placeholder="Select Home team", key="Home",label_visibility='collapsed')
                 show_image(team_name=home_team, images_path=logo_path)
             
             # "VS" text
@@ -96,7 +96,7 @@ def main():
             # Away team selection
             with col3:
                 st.header("Away Team")
-                away_team = st.selectbox("", options=teams, index=select_persist('Away'), placeholder="Select Away team", key="Away")  
+                away_team = st.selectbox("second select box", options=teams, index=select_persist('Away'), placeholder="Select Away team", key="Away",label_visibility='collapsed')  
                 show_image(team_name=away_team, images_path=logo_path)
 
         # Display winning team
