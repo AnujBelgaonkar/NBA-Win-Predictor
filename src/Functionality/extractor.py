@@ -2,12 +2,12 @@ import pandas as pd
 from nba_api.stats.endpoints import leaguegamefinder
 from src.Functionality.processor import encode,split_matchup,rolling_average,combine,clean_df,team_list
 import warnings
-
+import os
 warnings.filterwarnings("ignore")
 
 def get_data(team):
     df = pd.DataFrame()
-    gamefinder = leaguegamefinder.LeagueGameFinder(team_id_nullable = team_list.get(team))  
+    gamefinder = leaguegamefinder.LeagueGameFinder(team_id_nullable = team_list.get(team),proxy=os.getenv('proxy'))  
     games = gamefinder.get_data_frames()[0].head()
     games['HOME'] = 0
     games['AWAY'] = 0
