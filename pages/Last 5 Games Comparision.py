@@ -1,7 +1,11 @@
 import streamlit as st
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
-st.session_state.update(st.session_state)
+#st.session_state.update(st.session_state)
+if 'Home' not in st.session_state:
+        st.session_state.Home = None
+if 'Away' not in st.session_state:
+        st.session_state.Away = None
 st.session_state['Away'] = st.session_state['Away']
 st.session_state['Home'] = st.session_state['Home']
 if 'df' not in st.session_state:
