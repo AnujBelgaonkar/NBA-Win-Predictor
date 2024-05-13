@@ -4,10 +4,13 @@ from plotly.subplots import make_subplots
 #st.session_state.update(st.session_state)
 if 'Home' not in st.session_state:
         st.session_state.Home = None
+else:
+     st.session_state['Home'] = st.session_state['Home']
 if 'Away' not in st.session_state:
         st.session_state.Away = None
-st.session_state['Away'] = st.session_state['Away']
-st.session_state['Home'] = st.session_state['Home']
+else:
+    st.session_state['Away'] = st.session_state['Away']
+
 if 'df' not in st.session_state:
     st.write("Select Home and Away teams and Click the Fight button for their stats")
 else:
