@@ -7,7 +7,7 @@ warnings.filterwarnings("ignore")
 
 def get_data(team):
     df = pd.DataFrame()
-    gamefinder = leaguegamefinder.LeagueGameFinder(team_id_nullable = team_list.get(team))  
+    gamefinder = leaguegamefinder.LeagueGameFinder(team_id_nullable = team_list.get(team),proxy='38.154.227.167:5868')  
     games = gamefinder.get_data_frames()[0].head()
     games['HOME'] = 0
     games['AWAY'] = 0
