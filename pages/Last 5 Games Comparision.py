@@ -16,7 +16,7 @@ if 'df' not in st.session_state:
 else:
     performances = st.session_state['df']
 
-    st.page_link("main.py", label="Go Back")
+    st.page_link("application.py", label="Go Back")
     st.write("Note : When hovering over data points '_x' indicate Home team and '_y' indicate Away team.")
     column_pairs = [(col[:-2], col[:-2]+'_y') for col in performances.columns if col.endswith('_x')]
     x = ['1', '2', '3', '4', '5', 'Average']
